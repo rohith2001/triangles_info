@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TRIANGLE</title>
+    </head>
+    <body>
+    <h1 align='center' style="color:green; background-color:black">ALL ABOUT YOUR TRIANGLE</h1>
+      <script>
+        alert("Enter 3 sides");
+var a = prompt("Enter triangle's first side");
+var b = prompt("Enter triangle's second side");
+var c = prompt("Enter triangle's third side");
+var p = a / 2 + b /2 + c / 2;
+if(p > a, p > b, p > c) {
+    var s = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+    var r = s / p;
+    var R = (a * b * c) / (4 * s);
+    var ha = 2 * s / a;
+    var hb = 2 * s / b;
+    var hc = 2 * s / c;
+    var ma = Math.sqrt(2*(b*b+c*c)-a*a) / 2;
+    var mb = Math.sqrt(2*(a*a+c*c)-b*b) / 2;
+    var mc = Math.sqrt(2*(a*a+b*b)-c*c) / 2;
+    var la = Math.sqrt(4*b*c*p*(p-a)) / (2*p-a);
+    var lb = Math.sqrt(4*a*c*p*(p-b)) / (2*p-b);
+    var lc = Math.sqrt(4*a*b*p*(p-c)) / (2*p-c);
+    var sina = a / (2*R);
+    var sinb = b / (2*R);
+    var sinc = c / (2*R);
+    var cosa = Math.sqrt(1 - sina * sina);
+    var cosb = Math.sqrt(1 - sinb * sinb);
+    var cosc = Math.sqrt(1 - sinc * sinc);
+    var tga = sina / cosa;
+    var tgb = sinb / cosb;
+    var tgc = sinc / cosc;
+    var ctga = cosa / sina;
+    var ctgb = cosb / sinb;
+    var ctgc = cosc / sinc;
+    var dis = Math.sqrt(R * R - 2 * R *r);
+    var arcsina = Math.asin(sina) * 180 / 3.14;
+    var arcsinb = Math.asin(sinb) * 180 / 3.14;
+    var arcsinc = Math.asin(sinc) * 180 / 3.14;
+    document.write("<p align='center' style='color:green'>AREA OF TRIANGLE </p><br/>")
+    document.write("S = " + s + "<br/>");
+    document.write("<p align='center' style='color:green'>RADIUS OF CIRCLES DRAWN OUTSIDE AND INSIDE THE TRIANGLE</p>")
+    document.write("R = " + R +"<br/>");
+    document.write("r = " + r + "<br/>");
+    document.write("<p align='center' style='color:green'>DISTANCE BETWEEN THE CIRCLES\' CENTRES</p>");
+    document.write("DISTANCE = " + dis + "<br/>");
+    document.write("<p align='center' style='color:green'>HEIGHT OF THE TRIANGLE</p>")
+    document.write("h<sub>a</sub> = " + ha + "<br/>");
+    document.write("h<sub>b</sub> = " + hb + "<br/>");
+    document.write("h<sub>c</sub> = " + hc + "<br/>");
+    document.write("<p align='center' style='color:green'>MEDIANS OF TRIANGLE</p>")
+    document.write("m<sub>a</sub> = " + ma + "<br/>");
+    document.write("m<sub>b</sub> = " + mb + "<br/>");
+    document.write("m<sub>c</sub> = " + mc + "<br/>");
+    document.write("<p align='center' style='color:green'>BISSECTORS OF TRIANGLE</p>");
+    document.write("l<sub>a</sub> = " + la + "<br/>");
+    document.write("l<sub>b</sub> = " + lb + "<br/>");
+    document.write("l<sub>c</sub> = " + lc + "<br/>");
+    document.write("<p align='center' style='color:green'>ANGLES OF THE TRIANGLE</p>");
+    document.write("Angle opposite to a side = " + Math.round(arcsina) + "<br/>");
+    document.write("Angle opposite to b side = " + Math.round(arcsinb) + "<br/>");
+    document.write("Angle opposite to c side = " + Math.round(arcsinc) + "<br/>");
+    document.write("<p align='center' style='color:green'>SIN VALUES OF TRIANGLE ANGLES</p>");
+    document.write("sin(a) = " +(sina) +"<br/>");
+    document.write("sin(b) = " +(sinb) + "<br/>");
+    document.write("sin(c) = " + (sinc) +"<br/>");
+    document.write("<p align='center' style='color:green'>COS VALUES OF TRIANGLE ANGLES</p>");
+    document.write("cos(a) = " + (cosa) +"<br/>");
+    document.write("cos(b) = " + (cosb) + "<br/>");
+    document.write("cos(c) = " + (cosc) +"<br/>");
+    document.write("<p align='center' style='color:green'>TAN VALUES OF TRIANGLE ANGLES</p>");
+    document.write("tg(a) = " + (tga) +"<br/>");
+    document.write("tg(b) = " + (tgb) + "<br/>");
+    document.write("tg(c) = " + (tgc) +"<br/>");
+    document.write("<p align='center' style='color:green'>COT VALUES OF TRIANGLE ANGLES</p>");
+    document.write("ctg(a) = " + (ctga) +"<br/>");
+    document.write("ctg(b) = " + (ctgb) + "<br/>");
+    document.write("ctg(c) = " + (ctgc) +"<br/>");
+    document.write("<p align='center' style='color:green'>TRIGONOMETRY INVERSE FUNCTIONS</p> ");
+    document.write("sin inverse (a) = "+(arcsina)+"<br/>");
+    document.write("sin inverse (b) = "+(arcsinb)+"<br/>");
+    document.write("sin inverse (c) = "+(arcsinc)+"<br/>");
+    
+} else {
+    document.write("<div align='center' style='color:red'><p>No Triangle with those sides<p/><b>NOTE:</b><br/> To create real triangle your triangle sides must be like that <br/> <i>a+b>c, a+c>b, b+c>a</i></div>");
+}
+
+    </script>
+    
+      <h6 align="right" style="color:red">Copyright by Rohith</h6>  
+    </body>
+</html>
